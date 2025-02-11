@@ -1,46 +1,18 @@
 package ed.lab;
 
-import java.util.Random;
-
 public class Main {
 
-    private static final Random RANDOM = new Random();
+    private static final QuickSort<Integer> highPivotQuickSort = null;
 
-    private static final QuickSort<Integer> highPivotQuickSort = SortingAlgorithms::highPivotQuickSort;
+    private static final QuickSort<Integer> lowPivotQuickSort = null;
 
-    private static final QuickSort<Integer> lowPivotQuickSort = SortingAlgorithms::lowPivotQuickSort;
+    private static final QuickSort<Integer> randomPivotQuickSort = null;
 
-    private static final QuickSort<Integer> randomPivotQuickSort = SortingAlgorithms::randomPivotQuickSort;
+    private static final ArrayGenerator<Integer> sortedArrayGenerator = null;
 
-    private static final ArrayGenerator<Integer> sortedArrayGenerator = length -> {
-        Integer[] array = new Integer[length];
+    private static final ArrayGenerator<Integer> invertedArrayGenerator = null;
 
-        for (int i = 0; i < length; i++) {
-            array[i] = i;
-        }
-
-        return array;
-    };
-
-    private static final ArrayGenerator<Integer> invertedArrayGenerator = length -> {
-        Integer[] array = new Integer[length];
-
-        for (int i = 0; i < length; i++) {
-            array[i] = length - i;
-        }
-
-        return array;
-    };
-
-    private static final ArrayGenerator<Integer> randomArrayGenerator = length -> {
-        Integer[] array = new Integer[length];
-
-        for (int i = 0; i < length; i++) {
-            array[i] = RANDOM.nextInt(length * 10);
-        }
-
-        return array;
-    };
+    private static final ArrayGenerator<Integer> randomArrayGenerator = null;
 
     public static QuickSort<Integer> getHighPivotQuickSort() {
         return highPivotQuickSort;
