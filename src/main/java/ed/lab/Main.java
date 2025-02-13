@@ -1,18 +1,17 @@
 package ed.lab;
 
 public class Main {
+    private static final ArrayGenerator<Integer> sortedArrayGenerator = null; // Reemplácelo por una función lambda
 
-    private static final QuickSort<Integer> highPivotQuickSort = null;
+    private static final ArrayGenerator<Integer> invertedArrayGenerator = null; // Reemplácelo por una función lambda
 
-    private static final QuickSort<Integer> lowPivotQuickSort = null;
+    private static final ArrayGenerator<Integer> randomArrayGenerator = null; // Reemplácelo por una función lambda
 
-    private static final QuickSort<Integer> randomPivotQuickSort = null;
+    private static final QuickSort<Integer> highPivotQuickSort = null; // Reemplácelo por una referencia a un método
 
-    private static final ArrayGenerator<Integer> sortedArrayGenerator = null;
+    private static final QuickSort<Integer> lowPivotQuickSort = null; // Reemplácelo por una referencia a un método
 
-    private static final ArrayGenerator<Integer> invertedArrayGenerator = null;
-
-    private static final ArrayGenerator<Integer> randomArrayGenerator = null;
+    private static final QuickSort<Integer> randomPivotQuickSort = null; // Reemplácelo por una referencia a un método
 
     public static QuickSort<Integer> getHighPivotQuickSort() {
         return highPivotQuickSort;

@@ -27,7 +27,7 @@ ___
 - NO cambie la firma de los métodos existentes (no agrege más parámetros ni cambie el nombre), estos son utilizados para probar su código.
 - NO haga cambios en las pruebas, esto resulta en un **cero inmediato**.
 - Puede agregar nuevas clases y/o archivos, como sea necesario.
-- En la pestaña de **Actions** podrá ver como las pruebas se ejecutan con su código implementado (si hace `git push` previamente).
+- En la pestaña de **Actions** podrá ver como las pruebas se ejecutan con su código implementado (si hace `git push` de un nuevo commit previamente).
 ___
 
 ## Ejercicio 1
@@ -35,7 +35,7 @@ ___
 1. Abra la clase **Main**, diríjase al método `main()` de la clase. Describa qué es lo que se intenta hacer con el código.
 2. Abra la clase **SortingTester**, ¿qué se intenta hacer con el código de esa clase?
    1. ¿Qué paradigma de programación se utiliza para obtener un promedio de las diferentes duraciones?
-   2. ¿Qué cambios haría si también quisiera obtener la sumatoria de todas las duraciones?
+   2. ¿Qué cambios haría si también quisiera obtener la sumatoria de todas las duraciones utilizando Streams? Implemente los cambios en el código
 3. Regrese a la clase **Main** e intente ejecutar la aplicación. ¿Qué sucedió? ¿Por qué?
 ___
 
@@ -57,6 +57,7 @@ ___
    2. El arreglo generado no debe seguir ningún orden.
 6. ¿Cuál es la complejidad de tiempo y espacio de cada implementación de **ArrayGenerator**?
 7. Ejecute las pruebas unitarias. ¿Cuántas pruebas son exitosas ahora?
+8. Cree un nuevo `commit` con sus cambios y haga `push` a su repositorio remoto en GitHub.
 ___
 
 ## Ejercicio 3
@@ -67,10 +68,10 @@ ___
 2. Cree una nueva clase llamada **SortingAlgorithms**.
 3. Esta clase no debe heredar ni implementar ninguna interfaz.
 4. Defina los siguientes métodos en esta clase:
-   1. `void highPivotQuickSort(T[] array)`: ordena un arreglo utilizando el algoritmo quick sort y seleccionando el último elemento como pivote.
-   2. `void lowPivotQuickSort(T[] array)`: ordena un arreglo utilizando el algoritmo quick sort y seleccionando el primer elemento como pivote.
-   3. `void randomPivotQuickSort(T[] array)`: ordena un arreglo utilizando el algoritmo quick sort y seleccionando un elemento aleatorio como pivote.
-   4. Los métodos deben ser **_estáticos_** y limitarlos a tipos que hereden de `Comparable`.
+   1. `void highPivotQuickSort(T[] array)`: ordena un arreglo utilizando el algoritmo quick sort, seleccionando el último elemento como pivote.
+   2. `void lowPivotQuickSort(T[] array)`: ordena un arreglo utilizando el algoritmo quick sort, seleccionando el primer elemento como pivote.
+   3. `void randomPivotQuickSort(T[] array)`: ordena un arreglo utilizando el algoritmo quick sort, seleccionando un elemento aleatorio como pivote.
+   4. Los métodos deben ser **_estáticos_** y limitar el tipo de dato del arreglo a tipos que hereden de `Comparable`.
 5. ¿Cuál es la complejidad de tiempo en el peor de los casos para cada función?
 6. ¿Cuál es la complejidad de tiempo en el mejor de los casos para cada función?
 7. ¿Cuál es la complejidad de tiempo promedio para cada función?
@@ -83,7 +84,8 @@ ___
 3. Borre la definición de `null` que tiene asignada `lowPivotQuickSort` y reemplácela por la referencia del método correspondiente en **SortingAlgorithms**.
 4. Borre la definición de `null` que tiene asignada `randomPivotQuickSort` y reemplácela por la referencia del método correspondiente en **SortingAlgorithms**.
 5. Ejecute la aplicación. ¿Qué se imprime en pantalla?
-6. Si todos los arreglos son ordenados utilizando el mismo algoritmo, ¿por qué los promedios de tiempo son diferentes?
+6. Si todos los arreglos son ordenados utilizando el mismo algoritmo, ¿por qué los promedios de tiempo son diferentes? ¿Cuál tuvo mejores tiempos de ejecución?
+7. Cree un nuevo `commit` y haga `push` a su repositorio remoto.
 ___
 
 ## Ejercicio 5
@@ -91,6 +93,8 @@ ___
 1. Cree una nueva branch (o rama) de su repositorio, nómbrela `feature/string-arrays`
 2. En esta nueva branch, haga los cambios necesarios al código para que el código utilice arreglos `String` en lugar de `Integer`.
 3. ¿En qué clases realizó los cambios?
+4. ¿Cuál fue el beneficio de utilizar `Comparable`?
+5. Cree un nuevo `commit` y haga `push` a su repositorio remoto.
 ___
 
 ## Ejercicio 6.
