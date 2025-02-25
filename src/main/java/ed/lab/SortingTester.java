@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.LongSummaryStatistics;
 
 public class SortingTester<T extends Comparable<T>> {
     private static final int ARRAY_SIZE = 10000;
@@ -13,21 +12,30 @@ public class SortingTester<T extends Comparable<T>> {
 
     public void testSorting(ArrayGenerator<T> generator, QuickSort<T> quickSort) {
         T[] array = generator.generate(ARRAY_SIZE);
+
         List<Duration> durations = new ArrayList<>(TEST_SIZE);
 
         for (int i = 0; i < TEST_SIZE; i++) {
             T[] copy = Arrays.copyOf(array, array.length);
-            LocalDateTime start = LocalDateTime.now();
+
+            final LocalDateTime start = LocalDateTime.now();
+
             quickSort.sort(copy);
-            LocalDateTime end = LocalDateTime.now();
+
+            final LocalDateTime end = LocalDateTime.now();
             durations.add(Duration.between(start, end));
         }
 
-        LongSummaryStatistics stats = durations.stream()
+        long totalSum = durations.stream()
                 .mapToLong(Duration::toMillis)
-                .summaryStatistics();
+                .sum();
 
-        System.out.printf("\t\tTiempo total: %d ms\n", stats.getSum());
-        System.out.printf("\t\tTiempo promedio: %.2f ms\n", stats.getAverage());
+        double average = durations.stream()
+                .mapToLong(Duration::toMillis)
+                .average()
+                .orElse(0);
+
+        System.out.printf("\t\tTiempo total: %d ms\n", totalSum);
+        System.out.printf("\t\tTiempo promedio: %s ms\n", average);
     }
 }
