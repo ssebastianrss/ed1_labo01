@@ -1,5 +1,5 @@
 package ed.lab;
-
+import java.util.Random;
 public class Main {
     private static final ArrayGenerator<Integer> sortedArrayGenerator = length -> {
         Integer[] array = new Integer[length];
@@ -17,7 +17,14 @@ public class Main {
         return array;
     };
 
-    private static final ArrayGenerator<Integer> randomArrayGenerator = null; // Reemplácelo por una función lambda
+    private static final ArrayGenerator<Integer> randomArrayGenerator = length -> {
+        Integer[] array = new Integer[length];
+        Random rand = new Random();
+        for (int i = 0; i < length; i++) {
+            array[i] = rand.nextInt(10000);
+        }
+        return array;
+    };
 
     private static final QuickSort<Integer> highPivotQuickSort = null; // Reemplácelo por una referencia a un método
 
