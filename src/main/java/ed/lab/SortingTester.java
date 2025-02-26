@@ -31,3 +31,4 @@ public class SortingTester<T extends Comparable<T>> {
         System.out.printf("\t\tTiempo promedio: %.2f ms\n", stats.getAverage());
     }
 }
+
