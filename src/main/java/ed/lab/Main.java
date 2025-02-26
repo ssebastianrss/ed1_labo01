@@ -9,7 +9,13 @@ public class Main {
         return array;
     };
 
-    private static final ArrayGenerator<Integer> invertedArrayGenerator = null; // Reemplácelo por una función lambda
+    private static final ArrayGenerator<Integer> invertedArrayGenerator = length -> {
+        Integer[] array = new Integer[length];
+        for (int i = 0; i < length; i++) {
+            array[i] = length - 1 - i;
+        }
+        return array;
+    };
 
     private static final ArrayGenerator<Integer> randomArrayGenerator = null; // Reemplácelo por una función lambda
 
