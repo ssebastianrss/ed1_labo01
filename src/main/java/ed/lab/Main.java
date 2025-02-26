@@ -24,7 +24,7 @@ public class Main {
             array[i] = rand.nextInt(10000);
         }
         return array;
-    }; // Reemplácelo por una función lambda
+    };
 
     private static final QuickSort<Integer> highPivotQuickSort = null; // Reemplácelo por una referencia a un método
 
