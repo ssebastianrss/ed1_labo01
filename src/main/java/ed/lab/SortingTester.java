@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.LongSummaryStatistics;
 
 public class SortingTester<T extends Comparable<T>> {
-    private static final int ARRAY_SIZE = 10000;
+    private static final int ARRAY_SIZE = 1000;
     private static final int TEST_SIZE = 1000;
 
     public void testSorting(ArrayGenerator<T> generator, QuickSort<T> quickSort) {
