@@ -19,18 +19,18 @@ public class Main {
 
     private static final ArrayGenerator<Integer> randomArrayGenerator = length -> {
         Integer[] array = new Integer[length];
-        Random rand = new Random(); // Generador de números aleatorios
+        Random rand = new Random();
         for (int i = 0; i < length; i++) {
-            array[i] = rand.nextInt(10000); // Asigna un número aleatorio entre 0 y 9999
+            array[i] = rand.nextInt(10000);
         }
         return array;
     };
 
-    private static final QuickSort<Integer> highPivotQuickSort = null; // Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> highPivotQuickSort = SortingAlgorithms::highPivotQuickSort;
 
-    private static final QuickSort<Integer> lowPivotQuickSort = null; // Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> lowPivotQuickSort = SortingAlgorithms::lowPivotQuickSort;
 
-    private static final QuickSort<Integer> randomPivotQuickSort = null; // Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> randomPivotQuickSort = SortingAlgorithms::randomPivotQuickSort;
 
     public static QuickSort<Integer> getHighPivotQuickSort() {
         return highPivotQuickSort;
